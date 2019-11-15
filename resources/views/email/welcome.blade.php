@@ -15,9 +15,9 @@
     				color: black !important;
     			}
     			.verifycode {
-    				color: lightgreen;
+    				color: #49a347;
     				background: white;
-    				border: 1px solid lightgreen;
+    				border: 1px solid #49a347;
     				text-align: center;
     				padding: 10px 50px 10px 50px;
     				width: 50%;
@@ -28,7 +28,7 @@
     			.welcome{
     				font-weight: bold;
     				text-align: center;
-                    color: lightgreen !important;
+                    color: #49a347 !important;
     			}
     			.note{
     				font-weight: bold;
@@ -50,5 +50,10 @@
     			 <p class="note">Use this verification token to confirm account</p>
     			 <p class="verifycode">{{ $user->verifycode}}</p>
     		</div>
+
+			<div>
+                 <p class="team">if this mail is not authourize by you please discard</p>
+                 <p class="team" style="font-style: italic;">GateGuard Team</p>
+            </div>
     	</body>
     </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html lang="en-US">
     	<head>
-            <title>New Password</title>
+            <title>Estate Admin Welcome</title>
     		<meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
     		<style type="text/css">
@@ -15,9 +15,9 @@
     				color: black !important;
     			}
     			.verifycode {
-    				color: lightgreen;
+    				color: #49a347;
     				background: white;
-    				border: 1px solid lightgreen;
+    				border: 1px solid #49a347;
     				text-align: center;
     				padding: 10px 50px 10px 50px;
     				width: 50%;
@@ -28,7 +28,7 @@
     			.welcome{
     				font-weight: bold;
     				text-align: center;
-                    color: lightgreen !important;
+                    color: #49a347 !important;
     			}
     			.note{
     				font-weight: bold;
@@ -48,18 +48,19 @@
     		<div>
     			
     		</div>
-    		<h2 class="welcome">New Password Recovery</h2>
+    		<h2 class="welcome">Estate Admin Welcome</h2>
     		<div>
-    			 <h4 style="color: grey;">Hello {{$user->first_name}} {{$user->last_name}}</h4>
+    			 <h4 style="color: grey;">Hello {{$user->email}} </h4>
     		</div>
     		<div>
-    			 <p class="note">Use this verification token to create a new password</p>
-    			 <p class="verifycode">{{ $user->verifycode}}</p>
+				 <p class="note">You have been added as an admin to {{ $estate->estate_name }} @ {{ $estate->address }}, {{ $estate->city }},  {{ $estate->country }}</p>
+    			 <p class="note">Use this current email and password to login into your account!</p>
+    			 <p class="verifycode">{{ $password }}</p>
     		</div><br><br>
 
             <div>
-                 <p class="team">if this mail is not authourize by you please discard</p>
-                 <p class="team" style="font-style: italic;">Gate Pass Team</p>
+                 <p class="team">if this mail is not authourize by you please discard! Thank you</p>
+                 <p class="team" style="font-style: italic;">GateGuard Team</p>
             </div>
     	</body>
     </html>

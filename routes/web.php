@@ -1,4 +1,5 @@
 <?php
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return 'Welcome';
+    return view('welcome');
 });
+
+Route::get('/otp', function () {
+    $user = User::all();
+    return view('otp')->with('user', $user);
+});
+
